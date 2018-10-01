@@ -159,6 +159,12 @@ Default: *Resource Name*
 
 Specifies the destination log group. A log group will be created automatically if it doesn't already exist.
 
+#### `initial_position`
+
+Default: `start_of_file`
+
+Specifies how data is uploaded. The default `start_of_file` will upload everything in the data file. Set to `end_of_file` to upload only newly appended data.
+
 #### `multi_line_start_pattern`
 
 Default: `undef`
