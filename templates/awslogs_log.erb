@@ -3,7 +3,7 @@ datetime_format = <%= @datetime_format %>
 file = <%= @log_path %>
 buffer_duration = 5000
 log_stream_name = <%= @streamname %>
-initial_position = start_of_file
+initial_position = <%= @initial_position %>
 log_group_name = <%= @real_log_group_name %>
 <% if @multi_line_start_pattern -%>
 multi_line_start_pattern = <%= @multi_line_start_pattern %>
