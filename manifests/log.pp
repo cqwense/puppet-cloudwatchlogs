@@ -4,6 +4,7 @@ define cloudwatchlogs::log (
   $datetime_format = '%b %d %H:%M:%S',
   $log_group_name  = undef,
   $multi_line_start_pattern = undef,
+  $initial_position = 'start_of_file',
 
 ){
   if $path == undef {
@@ -22,6 +23,7 @@ define cloudwatchlogs::log (
   validate_string($datetime_format)
   validate_string($real_log_group_name)
   validate_string($multi_line_start_pattern)
+  validate_string($initial_position)
 
   concat::fragment { "cloudwatchlogs_fragment_${name}":
     target  => '/etc/awslogs/awslogs.conf',
